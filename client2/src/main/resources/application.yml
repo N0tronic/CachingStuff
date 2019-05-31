@@ -1,0 +1,16 @@
+server:
+  port: "${port:8090}"
+
+app:
+  cache:
+    enable: ${cache:true}
+  hazelcast: http://hazelcast:8080/hazelcast-mancenter
+
+spring:
+  h2:
+    console:
+      enabled: true
+      settings:
+        web-allow-others: true
+  datasource:
+    url: jdbc:h2:/tmp/tempdb

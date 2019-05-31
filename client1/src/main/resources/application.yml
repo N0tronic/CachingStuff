@@ -1,0 +1,7 @@
+server:
+  port: ${port:8085}
+
+app:
+  cache:
+    enable: ${cache:true}
+  hazelcast: http://hazelcast:8080/hazelcast-mancenter

@@ -1,0 +1,38 @@
+version: '3.5'
+
+services:
+  client1:
+    image: 'client1:latest'
+    container_name: client1
+    ports:
+      - 8081:8081
+    depends_on:
+      - hazelcast
+    environment:
+      - cache=true
+      - port=8081
+  client2:
+    image: 'client2:latest'
+    container_name: client2
+    ports:
+      - 8082:8082
+    depends_on:
+      - hazelcast
+    environment:
+      - cache=true
+      - port=8082
+  client3:
+    image: 'client2:latest'
+    container_name: client3
+    ports:
+      - 8083:8083
+    depends_on:
+      - hazelcast
+    environment:
+      - cache=true
+      - port=8083
+  hazelcast:
+    image: 'hazelcast/management-center:latest'
+    container_name: hazelcast
+    ports:
+      - 8080:8080
