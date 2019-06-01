@@ -24,7 +24,7 @@ Discover caching with Spring Boot and Hazelcast in a Docker environment
 - Hazelcast IMDG
 - Hazelcast Serialization (IdentifiedDataSerializable)
 
-## No discover distributed caching with the Hazelcast IMDG
+## Now discover distributed caching with the Hazelcast IMDG
 Over the swagger rest endpoints below you can get and set person objects and analyse over the Hazelcast dashboard how they are distributed in the caching cluster. Consider that the client services are only conected over the cache. There no common database and no other common structures to hold the data. That´s an intentionally decision that we can see that the data can spread only over the cache.
 
 ## Endpoints
